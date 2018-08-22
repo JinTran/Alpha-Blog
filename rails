@@ -1,0 +1,19 @@
+      create  app/controllers/welcome_controller.rb
+       route  get 'welcome/g'
+get 'welcome/controller'
+get 'welcome/welcome'
+      invoke  erb
+      create    app/views/welcome
+      create    app/views/welcome/g.html.erb
+      create    app/views/welcome/controller.html.erb
+      create    app/views/welcome/welcome.html.erb
+      invoke  test_unit
+      create    test/controllers/welcome_controller_test.rb
+      invoke  helper
+      create    app/helpers/welcome_helper.rb
+      invoke    test_unit
+      invoke  assets
+      invoke    coffee
+      create      app/assets/javascripts/welcome.coffee
+      invoke    scss
+      create      app/assets/stylesheets/welcome.scss
