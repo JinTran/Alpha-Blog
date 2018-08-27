@@ -1,7 +1,9 @@
 <%#= form_with(model:@article ,local: true)  do |form| %>
 <%#= form_with scope: :article , url: articles_path , local: true do |form| %>
 
-  <div class= "row"
+<%= render "shared/errors", obj: @article %>
+
+  <div class= "row">
   <div class="col-md-12">
 <%#= form_for  @article, local: true do |form| %>
     <%= form_with(model:@article ,local: true, :html => {class: "form-horizontal", role: "form"})  do |form| %>
