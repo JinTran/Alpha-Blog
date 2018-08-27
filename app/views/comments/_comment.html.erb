@@ -1,16 +1,24 @@
-<% @article.comments.each do |comment| %>
-  <p>
-    <strong>Commenter:</strong>
-    <%= comment.commenter %>
-  </p>
-  <p>
-    <strong>Body:</strong>
-    <%= comment.body %>
-  </p>
-  <p>
-    <%= link_to "Delete" , [comment.article, comment],
-                          method: :delete,
-                          data: {confirm: "Are u sure?"}%>
-  </p>
+<div class="row">
+  <div class="col-xs-col-8 col-xs-offset-1">
+    <div class="form-group">
+      <% @article.comments.each do |comment| %>
+        <p>
+          <strong>Commenter:</strong>
+          <%= comment.commenter %>
+        </p>
+        <p>
+          <strong>Body:</strong>
+          <%= comment.body %>
+        </p>
+        <p>
+          <%= link_to "Delete" , [comment.article, comment],
+                      method: :delete,
+                      data: {confirm: "Are u sure?"}%>
+        </p>
 
-<% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
