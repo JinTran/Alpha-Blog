@@ -47,12 +47,9 @@ class ArticlesController < ApplicationController
   def destroy
     @article = Article.find(params[:id])
     @article.destroy
-    respond_to do |format|
-      format.html { redirect_to articles_path, danger: 'Post was successfully destroyed.' }
-      format.json { head :no_content }
-    # flash[:danger] = "Article was successfully deleted"
-    #
-    # redirect_to articles_path
+    flash[:danger] = "Article was successfully deleted"
+
+    redirect_to articles_path
   end
 
   private
