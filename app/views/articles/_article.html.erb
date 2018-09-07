@@ -8,8 +8,9 @@
         </div>
         <div class="article-body">
           <% if article.photo.attached? %>
-            <%= link_to image_tag article.photo , class: "thumbnail"%>
+            <%= link_to image_tag article.photo , size: "200x100"%>
           <%end %>
+          <hr>
           <%= truncate(article.text, lenght: 100) %>
           <div class="article-meta-details">
             <small >Created by <%= article.user ? article.user.username : "no author " %>
